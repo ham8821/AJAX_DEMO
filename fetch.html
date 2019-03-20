@@ -7,11 +7,19 @@
         
     </article>
     <input type="button" value="fetch"  onclick= "alert('hi!')
-    fetch('html').then(function(response){
-        response.text().then(function(text){
-           document.querySelector('article').innerHTML= text;
-        })
-    })
+    // fetch('html').then(function(response){
+    //     response.text().then(function(text){
+    //        document.querySelector('article').innerHTML= text;
+    //     })
+    // })
+    //Asynchronous> until server responses next command can be executed
+    function callbackme(){
+        console.log('response end');
+        
+    }
+    fetch('html').then(callbackme);
+        console.log(1);
+        console.log(1);
 ">
 
 </body>
